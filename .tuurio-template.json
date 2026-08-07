@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "Tuurio/auth_samples",
+  "sourcePath": "auth_samples_java",
+  "sourceSha": "e883b1cb522a3aeb544a68bdd93a2d4c1d4606bb",
+  "templateId": "spring-boot",
+  "managedFiles": [
+    {
+      "path": ".env.example",
+      "sha256": "0c960fc14c8c1edd493fe71ad1f3fb8d09320e8371690bfffd8324a29bf62f05"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "71b210c453203a46e017cf0873e9acc25c660394b7236dd5815b0bde3dc9d90e"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "b817de4136acf0dede0102ef02ab41ac2f65d3b7e4d096d35d88041a52e87c6a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7c6f1d21e46d56c4178fe2403c2515c68614cfa6760fee27c459a7f38e3e9145"
+    },
+    {
+      "path": "build.gradle",
+      "sha256": "7fa2a4e8008e0fdfb7194cd53de27af29b3efb0059891077104dd87bf48d9cf9"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "7e0821d895908883350587c74476b717016ab416320c44dc82a10def916c6fb5"
+    },
+    {
+      "path": "gradlew",
+      "sha256": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409"
+    },
+    {
+      "path": "gradlew.bat",
+      "sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+    },
+    {
+      "path": "settings.gradle",
+      "sha256": "09e0c5fead5e34657481cf1f9fe1bacac0e93da0e69454c186e33ae14fcc5291"
+    },
+    {
+      "path": "src/main/java/com/tuurio/authsample/AuthSamplesJavaApplication.java",
+      "sha256": "9254506f65ea6e7822b8b72b8797aaee9ada431ca5bc5f1998ca8a7b2214dbe1"
+    },
+    {
+      "path": "src/main/java/com/tuurio/authsample/HomeController.java",
+      "sha256": "e9cb3364d305347510292085c8ad6430cf90a841aac62121791329ba71e76e42"
+    },
+    {
+      "path": "src/main/java/com/tuurio/authsample/NotFoundAdvice.java",
+      "sha256": "bdc45cd9876063c530cdf9636682ae0a7454de6e6e20c1323ae721ee91deb240"
+    },
+    {
+      "path": "src/main/java/com/tuurio/authsample/SecurityConfig.java",
+      "sha256": "a21c2230ebd870dbbbefd5f5dfd8bf9c7a9db299afaec0dbdc488470813bf049"
+    },
+    {
+      "path": "src/main/java/com/tuurio/authsample/WebhookController.java",
+      "sha256": "0a09b1fbc42bebf363e75db32b3657aed79153a9833f8a2fc29d571389f50893"
+    },
+    {
+      "path": "src/main/resources/application.yml",
+      "sha256": "b8f0621bdb4c92b2c646f962d99e403aa2acab65096997705b3363c94938e1f1"
+    },
+    {
+      "path": "src/main/resources/static/assets/app.css",
+      "sha256": "aff77a0590daf4d482409b4f1b329896739c44ce57fe6dae0721cf53611dcbb9"
+    },
+    {
+      "path": "src/main/resources/static/assets/favicon.svg",
+      "sha256": "4150ed3f52dcf0d3dd7e479c76f83354b268f27f9fa2422d9d217ee51e3805dd"
+    },
+    {
+      "path": "src/main/resources/templates/index.html",
+      "sha256": "c8647c866922b91dd6078194b1b2b559f88d691cd336f41c9379db35d45c0582"
+    },
+    {
+      "path": "src/main/resources/templates/logout-callback.html",
+      "sha256": "879810a9811bc91dd6b392a795dd87105d572c25fce2eeda1e5806eaff7f3755"
+    },
+    {
+      "path": "src/main/resources/templates/not-found.html",
+      "sha256": "9f432bfabac7ac3fea5800b273b27b7f148b4d5ab282bcea067eff5f3ccb169f"
+    },
+    {
+      "path": "src/test/java/com/tuurio/authsample/HomeControllerTest.java",
+      "sha256": "56f637342fbb831064485ff6be586d3c06a874ae09d0f8f9bd3a1f303c58f44a"
+    }
+  ]
+}

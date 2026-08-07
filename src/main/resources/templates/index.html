@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tuurio Auth Studio</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/assets/app.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="app">
+        <aside class="side-panel">
+          <div class="brand">
+            <div class="logo-mark">tu</div>
+            <div>
+              <p class="brand-name">Tuurio Auth Studio</p>
+              <p class="brand-subtitle">OIDC playground for OAuth 2.0</p>
+            </div>
+          </div>
+          <div class="side-card">
+            <h1>Design for<br />secure sign in.</h1>
+            <p class="muted">
+              A minimal Java server that authenticates with OpenID Connect, inspects decoded
+              tokens, and supports logout redirects.
+            </p>
+            <div class="status-row">
+              <span class="status" th:classappend="' status-' + ${statusTone}">[[${statusLabel}]]</span>
+              <span class="muted">[[${authorityHost}]]</span>
+            </div>
+          </div>
+          <div class="side-list">
+            <div class="side-list-item">
+              <div>
+                <span class="side-list-label">Architecture</span>
+                <span class="side-list-value">Auth code + PKCE</span>
+              </div>
+            </div>
+            <div class="side-list-item">
+              <div>
+                <span class="side-list-label">Storage</span>
+                <span class="side-list-value">Server session</span>
+              </div>
+            </div>
+            <div class="side-list-item">
+              <div>
+                <span class="side-list-label">Scope</span>
+                <span class="side-list-value">openid profile email</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <main class="main-panel">
+          <div th:if="${authenticated}">
+            <div class="stack">
+              <section class="card card-hero">
+                <div class="card-header">
+                  <span class="badge badge-success">Authenticated</span>
+                  <h2 class="card-title">Session active</h2>
+                  <p class="muted">
+                    <code>[[${scopeLabel}]]</code> · expires at [[${expiresLabel}]]
+                  </p>
+                </div>
+                <div class="button-row">
+                  <form method="post" action="/logout">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                    <button class="button ghost" type="submit">Log out and end session</button>
+                  </form>
+                  <span class="helper">Clears local state and redirects through the identity provider.</span>
+                </div>
+              </section>
+
+              <section class="card">
+                <div class="section-header">
+                  <div class="section-icon">UI</div>
+                  <div>
+                    <h3 class="section-title">User profile</h3>
+                    <p class="muted">Claims returned by the UserInfo endpoint.</p>
+                  </div>
+                </div>
+                <pre class="code-block">[[${profileJson}]]</pre>
+              </section>
+
+              <section class="card">
+                <div class="section-header">
+                  <div class="section-icon">ID</div>
+                  <div>
+                    <h3 class="section-title">Provider discovery</h3>
+                    <p class="muted">OIDC metadata used to resolve endpoints and session management URLs.</p>
+                  </div>
+                </div>
+                <div class="stack">
+                  <div>
+                    <span class="eyebrow">Authority</span>
+                    <p><a class="link" th:href="${authority}" target="_blank" rel="noreferrer">[[${authority}]]</a></p>
+                  </div>
+                  <div>
+                    <span class="eyebrow">Discovery document</span>
+                    <p><a class="link" th:href="${discoveryUrl}" target="_blank" rel="noreferrer">[[${discoveryUrl}]]</a></p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div th:unless="${authenticated}">
+            <div class="stack">
+              <section class="card card-hero">
+                <div class="card-header">
+                  <span class="eyebrow">OAuth 2.0 + OpenID Connect</span>
+                  <h2 class="card-title">Sign in to continue</h2>
+                  <p class="muted">
+                    Authenticate with the authorization code flow and PKCE. Tokens are exchanged
+                    server-side and stored in the HTTP session for this demo.
+                  </p>
+                </div>
+                <div class="button-row">
+                  <a class="button primary" href="/login">Continue with Tuurio ID <span class="btn-arrow">&rarr;</span></a>
+                  <span class="helper">Redirects to [[${authorityHost}]]</span>
+                </div>
+                <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+              </section>
+
+              <div class="feature-grid">
+                  <div class="feature-card">
+                    <h3>PKCE by default</h3>
+                    <p class="muted">Proof Key for Code Exchange prevents authorization code interception attacks.</p>
+                  </div>
+                  <div class="feature-card">
+                    <h3>Short-lived tokens</h3>
+                    <p class="muted">Access tokens expire quickly, scoped to openid profile email.</p>
+                  </div>
+                  <div class="feature-card">
+                    <h3>Session aware</h3>
+                    <p class="muted">Token state lives server-side. Nothing sensitive reaches the browser.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
