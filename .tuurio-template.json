@@ -1,8 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "sourceRepository": "Tuurio/auth_samples",
   "sourcePath": "auth_samples_java",
-  "sourceSha": "e883b1cb522a3aeb544a68bdd93a2d4c1d4606bb",
+  "sourceSha": "6833b4a83ac9aaa09f289f5de9d02aa1fa053e7d",
+  "packageSha256": "e4d8d8b9d4071f56fe9198090ed09a72a65bf5846096bb81ff315bcf73adc352",
   "templateId": "spring-boot",
   "managedFiles": [
     {
@@ -23,7 +24,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "7c6f1d21e46d56c4178fe2403c2515c68614cfa6760fee27c459a7f38e3e9145"
+      "sha256": "933f29db10da726dc1f3c3a33afba7fd7cc4eebf63cc044d2b0ea2d102ddb118"
     },
     {
       "path": "build.gradle",
