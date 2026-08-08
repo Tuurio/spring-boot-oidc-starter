@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "sourceRepository": "Tuurio/auth_samples",
   "sourcePath": "auth_samples_java",
-  "sourceSha": "6833b4a83ac9aaa09f289f5de9d02aa1fa053e7d",
+  "sourceSha": "fd87414e420b10fc0ca59d5552595d1b51be6230",
   "packageSha256": "e4d8d8b9d4071f56fe9198090ed09a72a65bf5846096bb81ff315bcf73adc352",
   "templateId": "spring-boot",
   "managedFiles": [
