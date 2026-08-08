@@ -4,6 +4,8 @@ Spring Boot authentication starter for Tuurio ID using Spring Security OAuth2 Cl
 
 [![Verify template](https://github.com/Tuurio/spring-boot-oidc-starter/actions/workflows/verify.yml/badge.svg)](https://github.com/Tuurio/spring-boot-oidc-starter/actions/workflows/verify.yml)
 
+![Spring Boot OIDC Starter social preview](.github/social-preview.png)
+
 > Generated from [`Tuurio/auth_samples/auth_samples_java`](https://github.com/Tuurio/auth_samples/tree/main/auth_samples_java). Submit implementation fixes upstream so they are not replaced by the next synchronized release.
 
 ## What you get

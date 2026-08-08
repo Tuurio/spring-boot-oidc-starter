@@ -2,13 +2,21 @@
   "schemaVersion": 2,
   "sourceRepository": "Tuurio/auth_samples",
   "sourcePath": "auth_samples_java",
-  "sourceSha": "fd87414e420b10fc0ca59d5552595d1b51be6230",
-  "packageSha256": "e4d8d8b9d4071f56fe9198090ed09a72a65bf5846096bb81ff315bcf73adc352",
+  "sourceSha": "ee751281bb9cedc2d269c3e21e6e0d544cf2cbf8",
+  "packageSha256": "8e592d3ab79c650866fd7b1ca2c423d44afb175c6d7d9940f128dd2db4d2dd89",
   "templateId": "spring-boot",
   "managedFiles": [
     {
       "path": ".env.example",
       "sha256": "0c960fc14c8c1edd493fe71ad1f3fb8d09320e8371690bfffd8324a29bf62f05"
+    },
+    {
+      "path": ".github/social-preview.png",
+      "sha256": "8c0b8aa8372500adea2f0435f7e6418ce5ef77304c99a750f036c5942da30acf"
+    },
+    {
+      "path": ".github/social-preview.svg",
+      "sha256": "94f8ae8ef39ce03a6929d2cde887b6f1694b49e8018521170e53c1889cc48103"
     },
     {
       "path": ".github/workflows/verify.yml",
@@ -24,7 +32,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "933f29db10da726dc1f3c3a33afba7fd7cc4eebf63cc044d2b0ea2d102ddb118"
+      "sha256": "d44bc52d31aefca2109a73bc7395be6ec528f1bacf85c645bb4ed0047c880d46"
     },
     {
       "path": "build.gradle",
